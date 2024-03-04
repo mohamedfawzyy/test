@@ -1,0 +1,11 @@
+<section class="container mx-auto my-5 pt-5">
+    <div class="row g-4">
+        <div class="col-md-4" *ngFor="let category of categories">
+           <div class="product border border-2 border-light-subtle text-center rounded-2 cursor-pointer">
+            <img class="w-100 object-fit-cover rounded-2" height="350" [src]="category.image" [alt]="category.name">
+            <h1 class="h4 py-3 text-main fw-bold">{{category.name}}</h1>
+           </div>
+          
+        </div>
+    </div>
+</section>

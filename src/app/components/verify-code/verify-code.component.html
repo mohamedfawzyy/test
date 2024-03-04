@@ -1,0 +1,9 @@
+<section class="bg-light p-4 w-75 mx-auto">
+    <form [formGroup]="verifyCode" (ngSubmit)="handleForm()">
+        <h1>Please insert your Verfication Code</h1>
+        <input type="text" name="code" placeholder="code" formControlName="resetCode" class="form-control">
+        <p *ngIf="verifyCode.get('resetCode')?.getError('required') && verifyCode.get('resetCode')?.touched" class="alert alert-danger">this is Required</p>
+        <button class="btn btn-outline-success mt-3">verify</button>
+        <p class="alert alert-danger" *ngIf="errorCode">{{errorCode}}</p>
+    </form>
+</section>
